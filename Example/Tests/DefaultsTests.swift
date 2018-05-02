@@ -28,15 +28,15 @@ class DefaultsTests: XCTestCase {
     func test_codableSuccessSaveLoadValue() {
         let object = Object.test()
         let def = Defaults<Object>(key: "object")
-        XCTAssertNil(def.decodedValue())
-        try? def.saveEncodeValue(object)
+        XCTAssertNil(def.decodableValue())
+        try? def.saveEncodableValue(object)
         
-        let loaded = def.decodedValue()
+        let loaded = def.decodableValue()
         XCTAssertNotNil(loaded)
     
         XCTAssertEqual(object, loaded)
         def.delete()
-        XCTAssertNil(def.decodedValue())
+        XCTAssertNil(def.decodableValue())
     }
     
     func test_defaultValue() {
