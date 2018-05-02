@@ -7,8 +7,20 @@
 
 import Foundation
 
-public extension Defaults where T: Codable {
-   
+public extension Defaults where T: Encodable {
+    
+    func saveEncodeValue(_ value: T, with encoder: JSONEncoder = JSONEncoder()) throws {
+        do {
+            saveOfClear(try encoder.encode(value), for: key)
+        } catch {
+            errorLog(error, "encode")
+            throw error
+        }
+    }
+}
+
+public extension Defaults where T: Decodable {
+    
     private func dataValue() -> Data? {
         return value(for: key) as? Data
     }
@@ -26,17 +38,12 @@ public extension Defaults where T: Codable {
     func decodedValue(defaultValue: T) -> T {
         return decodedValue() ?? defaultValue
     }
+}
+
+
+internal extension Defaults {
     
-    func saveEncodeValue(_ value: T, with encoder: JSONEncoder = JSONEncoder()) throws {
-        do {
-            saveOfClear(try encoder.encode(value), for: key)
-        } catch {
-            errorLog(error, "encode")
-            throw error
-        }
-    }
-    
-    private func errorLog(function: String = #function, line: Int = #line, _ error: Error, _ verb: String) {
+    func errorLog(function: String = #function, line: Int = #line, _ error: Error, _ verb: String) {
         let template = """
         Defaults failed to \(verb) value for \(T.self)
         `Defaults.swift` \(function) : \(line)
@@ -45,4 +52,3 @@ public extension Defaults where T: Codable {
         debugPrint(template)
     }
 }
-
