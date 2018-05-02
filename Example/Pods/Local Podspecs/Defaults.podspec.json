@@ -1,0 +1,22 @@
+{
+  "name": "Defaults",
+  "version": "0.1.0",
+  "summary": "A short description of Defaults.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/oreninit/Defaults",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "oreninit": "oreninit@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/oreninit/Defaults.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Defaults/Classes/**/*"
+}

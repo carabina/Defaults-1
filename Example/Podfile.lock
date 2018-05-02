@@ -1,0 +1,16 @@
+PODS:
+  - Defaults (0.1.0)
+
+DEPENDENCIES:
+  - Defaults (from `../`)
+
+EXTERNAL SOURCES:
+  Defaults:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Defaults: 578142e1495747f085c6bbdb557f083a9ac034a1
+
+PODFILE CHECKSUM: 77cfe8c27bd7e829441bf2a838e1882f86818094
+
+COCOAPODS: 1.5.0
