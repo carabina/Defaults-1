@@ -7,37 +7,43 @@
 
 import Foundation
 
- struct Defaults<T> {
-    private let userDefaults: UserDefaults
-    let key: String
+public struct Defaults<T> {
     
-    func value() -> T? {
+    private let userDefaults: UserDefaults
+    
+    public let key: String
+    
+    public func value() -> T? {
         return userDefaults.value(forKey: key) as? T
     }
     
-    func value(defaultValue: T) -> T? {
+    public func value(defaultValue: T) -> T? {
         return value() ?? defaultValue
     }
     
-    func value<U>(defaultValue: U, _ closure: ((T) -> U?)) -> U {
+    public func value<U>(defaultValue: U, _ closure: ((T) -> U?)) -> U {
         guard let value = value(), let concrete = closure(value) else { return defaultValue }
         return concrete
     }
     
-    func save(_ value: T?) {
+    public func save(_ value: T?) {
         saveOfClear(value)
     }
     
-    func clear() {
-        userDefaults.removeObject(forKey: key)
+    public func clear() {
+        save(nil)
     }
     
-    fileprivate func saveOfClear(_ value: Any?) {
+    internal func saveOfClear(_ value: Any?) {
         if let value = value {
             userDefaults.set(value, forKey: key)
         } else {
             clear()
         }
+        sync()
+    }
+    
+    private func sync() {
         userDefaults.synchronize()
     }
 }
