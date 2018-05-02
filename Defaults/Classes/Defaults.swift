@@ -46,3 +46,16 @@ public struct Defaults<T> {
         userDefaults.synchronize()
     }
 }
+
+public extension Defaults {
+    
+    init(key: String) {
+        userDefaults = UserDefaults.standard
+        self.key = key
+    }
+    
+    init(defaults: UserDefaults, key: String) {
+        userDefaults = defaults
+        self.key = key
+    }
+}
