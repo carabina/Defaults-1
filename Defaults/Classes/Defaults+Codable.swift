@@ -9,6 +9,12 @@ import Foundation
 
 public extension Defaults where T: Encodable {
     
+    /// Saves `Encodable` by converting to `Data`
+    ///
+    /// - Parameters:
+    ///   - value: `Encodable` object to save
+    ///   - encoder: `JSONEncoder` to use for encoding. Defaults to `JSONEncoder()`
+    /// - Throws: `Encoding` exception
     func saveEncodeValue(_ value: T, with encoder: JSONEncoder = JSONEncoder()) throws {
         do {
             saveOfClear(try encoder.encode(value), for: key)
@@ -25,6 +31,10 @@ public extension Defaults where T: Decodable {
         return value(for: key) as? Data
     }
     
+    /// Loads `Decodable` by loading `Data` and converting to expected type
+    ///
+    /// - Parameter decoder: A `JSONDecoder` to user for decoding. Defaults to `JSONDecoder()`
+    /// - Returns: An optional value, if data exists and successfully converted.
     func decodedValue(with decoder: JSONDecoder = JSONDecoder()) -> T? {
         guard let data = dataValue() else { return nil }
         do {
@@ -35,6 +45,10 @@ public extension Defaults where T: Decodable {
         }
     }
     
+    /// Loads `Decodable` if exists
+    ///
+    /// - Parameter defaultValue: A value to return in case loading fails
+    /// - Returns: Loaded value or `defaultValue` if doesn't exist
     func decodedValue(defaultValue: T) -> T {
         return decodedValue() ?? defaultValue
     }

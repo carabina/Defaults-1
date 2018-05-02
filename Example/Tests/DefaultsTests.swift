@@ -74,7 +74,7 @@ class DefaultsTests: XCTestCase {
         XCTAssert(all.contains(where: { $0.key == "3" }))
         XCTAssert(all.contains(where: { $0.key == "4" }))
         
-        def.clearAll(containedIn: ["1", "2", "3", "4"])
+        def.deleteAll(containedIn: ["1", "2", "3", "4"])
         let newAll = def.allEntries(containedIn: ["1", "2", "3", "4"])
         XCTAssertEqual(newAll.count, 0)
     }
