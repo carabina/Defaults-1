@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'Defaults'
+  s.name             = 'Defaultz'
   s.version          = '1.0.0'
   s.summary          = 'UserDefaults, the generic way.'
   s.description      = <<-DESC
