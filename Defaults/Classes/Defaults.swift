@@ -9,8 +9,7 @@ import Foundation
 
 public struct Defaults<T> {
     
-    private let userDefaults: UserDefaults
-    
+    internal let userDefaults: UserDefaults
     public let key: String
     
     public func value() -> T? {
