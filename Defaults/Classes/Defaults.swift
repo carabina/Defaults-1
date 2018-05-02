@@ -29,7 +29,7 @@ public struct Defaults<T> {
         saveOfClear(value)
     }
     
-    public func clear() {
+    public func delete() {
         save(nil)
     }
     
@@ -37,7 +37,8 @@ public struct Defaults<T> {
         if let value = value {
             userDefaults.set(value, forKey: key)
         } else {
-            clear()
+            userDefaults.removeObject(forKey: key)
+            userDefaults.set(nil, forKey: key)
         }
         sync()
     }
@@ -47,6 +48,7 @@ public struct Defaults<T> {
     }
 }
 
+// MARK: Initialisers
 public extension Defaults {
     
     init(key: String) {
