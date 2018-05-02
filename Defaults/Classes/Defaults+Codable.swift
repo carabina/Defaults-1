@@ -10,7 +10,7 @@ import Foundation
 public extension Defaults where T: Codable {
    
     private func dataValue() -> Data? {
-        return userDefaults.value(forKey: key) as? Data
+        return value(for: key) as? Data
     }
     
     func decodedValue(with decoder: JSONDecoder = JSONDecoder()) -> T? {
@@ -29,7 +29,7 @@ public extension Defaults where T: Codable {
     
     func saveEncodeValue(_ value: T, with encoder: JSONEncoder = JSONEncoder()) throws {
         do {
-            saveOfClear(try encoder.encode(value))
+            saveOfClear(try encoder.encode(value), for: key)
         } catch {
             errorLog(error, "encode")
             throw error

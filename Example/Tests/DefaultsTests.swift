@@ -60,6 +60,24 @@ class DefaultsTests: XCTestCase {
         XCTAssertEqual(value, .normal)
         def.delete()
     }
+    
+    func test_loadAndClearAllEntries() {
+        let def = Defaults<Any>(defaults: UserDefaults())
+        def.save("value 1", for: "1")
+        def.save("value 2", for: "2")
+        def.save("value 3", for: "3")
+        def.save(4, for: "4")
+        
+        let all = def.allEntries()
+        XCTAssert(all.contains(where: { $0.key == "1" }))
+        XCTAssert(all.contains(where: { $0.key == "2" }))
+        XCTAssert(all.contains(where: { $0.key == "3" }))
+        XCTAssert(all.contains(where: { $0.key == "4" }))
+        
+        def.clearAll(containedIn: ["1", "2", "3", "4"])
+        let newAll = def.allEntries(containedIn: ["1", "2", "3", "4"])
+        XCTAssertEqual(newAll.count, 0)
+    }
 }
 
 private struct Object: Codable, Equatable {
