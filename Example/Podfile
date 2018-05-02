@@ -1,0 +1,6 @@
+use_frameworks!
+target 'Defaults_Tests' do
+  pod 'Defaults', :path => '../'
+  
+  
+end
