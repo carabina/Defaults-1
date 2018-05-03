@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B40F3C9B851615380BC86775 /* Pods_Defaults_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4B9F88B897670737C8E944 /* Pods_Defaults_Tests.framework */; };
 		EA6CF4452099A2DD005C5196 /* DefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6CF4442099A2DD005C5196 /* DefaultsTests.swift */; };
-		EA6CF447209AE57C005C5196 /* Swifaults.podspec in Resources */ = {isa = PBXBuildFile; fileRef = EA6CF446209AE57C005C5196 /* Swifaults.podspec */; };
+		EA6CF449209AE670005C5196 /* Swifaults.podspec in Resources */ = {isa = PBXBuildFile; fileRef = EA6CF448209AE670005C5196 /* Swifaults.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +21,7 @@
 		7A4B9F88B897670737C8E944 /* Pods_Defaults_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Defaults_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6FE97DBD05701DEB2F0941 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		EA6CF4442099A2DD005C5196 /* DefaultsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsTests.swift; sourceTree = "<group>"; };
-		EA6CF446209AE57C005C5196 /* Swifaults.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Swifaults.podspec; path = ../Swifaults.podspec; sourceTree = "<group>"; };
+		EA6CF448209AE670005C5196 /* Swifaults.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Swifaults.podspec; path = ../Swifaults.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,8 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				EA6CF448209AE670005C5196 /* Swifaults.podspec */,
 				AE6FE97DBD05701DEB2F0941 /* README.md */,
-				EA6CF446209AE57C005C5196 /* Swifaults.podspec */,
 				0544667720A323A1AD83B905 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
@@ -161,7 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA6CF447209AE57C005C5196 /* Swifaults.podspec in Resources */,
+				EA6CF449209AE670005C5196 /* Swifaults.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
