@@ -1,14 +1,14 @@
-# Defaults
+# Swifaults
 
-[![Version](https://img.shields.io/cocoapods/v/Defaults.svg?style=flat)](https://cocoapods.org/pods/Defaults)
-[![License](https://img.shields.io/cocoapods/l/Defaults.svg?style=flat)](https://cocoapods.org/pods/Defaults)
-[![Platform](https://img.shields.io/cocoapods/p/Defaults.svg?style=flat)](https://cocoapods.org/pods/Defaults)
+[![Version](https://img.shields.io/cocoapods/v/Swifaults.svg?style=flat)](https://cocoapods.org/pods/Swifaults)
+[![License](https://img.shields.io/cocoapods/l/Swifaults.svg?style=flat)](https://cocoapods.org/pods/Swifaults)
+[![Platform](https://img.shields.io/cocoapods/p/Swifaults.svg?style=flat)](https://cocoapods.org/pods/Swifaults)
 
-## About Defaults
+## About Swifaults
 
 UserDefaults, the generic way.
 
-`Defaults` is a wrapper around `UserDefaults`, leveraging generics to provide a type safe, simple and clear interface. 
+`Swifaults` is a wrapper around `UserDefaults`, leveraging generics to provide a type safe, simple and clear interface. 
 
 ## Example
 
@@ -25,7 +25,7 @@ let defaults = UserDefaults.standard
 let value = defaults.string(forKey: "My key")
 ```
 
-`Defaults` allows a clearer usage.
+`Swifaults` allows a clearer usage.
 
 For saving:
 ```swift
@@ -68,11 +68,11 @@ Simple. Give it a go.
 
 ## Installation
 
-Defaults is available through [CocoaPods](https://cocoapods.org). To install
+Swifaults is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Defaults'
+pod 'Swifaults'
 ```
 
 ## Author
@@ -81,4 +81,4 @@ Oren Farhan
 
 ## License
 
-Defaults is available under the MIT license. See the LICENSE file for more info.
+Swifaults is available under the MIT license. See the LICENSE file for more info.

@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
-  s.name             = 'Defaultz'
+  s.name             = 'Swifaults'
   s.version          = '1.0.0'
   s.summary          = 'UserDefaults, the generic way.'
   s.description      = <<-DESC
-Defalts wraps UserDefaults and allow you to interact with it in a simple, clear and type safe manner.
+  Swifaults wraps UserDefaults and allow you to interact with it in a simple, clear and type safe way.
   DESC
   s.homepage         = 'https://github.com/oreninit/Defaults'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

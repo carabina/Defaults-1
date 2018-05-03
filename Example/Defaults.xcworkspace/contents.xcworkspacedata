@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Defaults.xcodeproj">
+      location = "group:/Users/orenf/Workspace/iOS/Pods/Defaults/Example/Defaults.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
